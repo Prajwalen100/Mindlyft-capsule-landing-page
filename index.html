@@ -1903,6 +1903,197 @@
       box-shadow: 0 14px 30px rgba(3,105,161,0.26), 0 4px 12px rgba(124,58,237,0.18);
     }
 
+    /* ── FAQ - CalibiAI style ── */
+    .faq-section {
+      padding-block: 72px 80px;
+      background: #f9fafb;
+      background: linear-gradient(180deg, #fcfcff 0%, #f8f9fb 100%);
+      border-top: 1px solid #f1f2f6;
+    }
+    .faq-grid {
+      display: grid;
+      grid-template-columns: 380px minmax(0, 1fr);
+      gap: 48px;
+      align-items: start;
+    }
+    .faq-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 5px 11px;
+      border-radius: 999px;
+      background: #fff;
+      border: 1px solid #e7e7ef;
+      color: #6b7280;
+      font-family: var(--body);
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      box-shadow: 0 1px 4px rgba(15,23,42,0.04);
+    }
+    .faq-pill svg { width:13px; height:13px; color:#6b7280; }
+    .faq-title {
+      margin: 16px 0 0;
+      font-family: var(--display);
+      font-size: clamp(1.9rem, 3.5vw, 2.45rem);
+      font-weight: 800;
+      letter-spacing: -0.05em;
+      line-height: 1.1;
+      color: #0f172a;
+    }
+    .faq-title span {
+      display: block;
+      color: #0f172a;
+    }
+    .faq-title span:last-child {
+      color: #8a9bb0;
+      color: #9aa3b6;
+      font-weight: 800;
+    }
+    .faq-subtitle {
+      margin: 16px 0 0;
+      color: #6b7280;
+      font-size: 14px;
+      line-height: 1.6;
+      max-width: 320px;
+    }
+    .faq-subtitle a {
+      color: #0f172a;
+      font-weight: 600;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      text-decoration-color: #cbd5e1;
+      transition: color 150ms ease;
+    }
+    .faq-subtitle a:hover { color:#4f46e5; text-decoration-color:#4f46e5; }
+    .faq-callout {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-top: 28px;
+      padding: 14px 16px;
+      border-radius: 14px;
+      background: #fff;
+      border: 1px solid #ececef;
+      box-shadow: 0 2px 10px rgba(15,23,42,0.04);
+      max-width: 360px;
+    }
+    .faq-callout__icon {
+      display: grid;
+      place-items: center;
+      width: 36px; height: 36px;
+      flex: 0 0 auto;
+      border-radius: 10px;
+      background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #a78bfa 100%);
+      color: #fff;
+      font-weight: 700;
+      font-size: 15px;
+      box-shadow: 0 4px 12px rgba(99,102,241,0.22);
+    }
+    .faq-callout strong {
+      display: block;
+      color: #0f172a;
+      font-size: 13px;
+      font-weight: 700;
+      line-height: 1.2;
+    }
+    .faq-callout span {
+      display: block;
+      color: #6b7280;
+      font-size: 12.5px;
+      line-height: 1.3;
+      margin-top: 1px;
+    }
+
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .faq-item {
+      border-radius: 16px;
+      border: 1px solid #ececef;
+      background: #fff;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(15,23,42,0.03);
+      transition: border-color 180ms ease, box-shadow 180ms ease;
+    }
+    .faq-item:hover { border-color:#e0e7ff; box-shadow: 0 4px 12px rgba(15,23,42,0.05); }
+    .faq-item.is-open {
+      border-color: #0ea5e9;
+      border-color: #38bdf8;
+      border-top: 1.5px solid #0ea5e9;
+      box-shadow: 0 6px 18px rgba(14,165,233,0.07);
+    }
+    .faq-question {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 18px 20px 18px 22px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      text-align: left;
+      font-family: var(--body);
+      font-size: 14.5px;
+      font-weight: 600;
+      color: #1e293b;
+      letter-spacing: -0.01em;
+      line-height: 1.4;
+    }
+    .faq-question:focus-visible { outline: 2px solid #0ea5e9; outline-offset: -2px; border-radius: 16px; }
+    .faq-toggle {
+      display: grid;
+      place-items: center;
+      width: 28px; height: 28px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      border: 1px solid #e5e7eb;
+      background: #f9fafb;
+      color: #6b7280;
+      font-size: 16px;
+      line-height: 1;
+      font-weight: 400;
+      transition: all 180ms ease;
+    }
+    .faq-item.is-open .faq-toggle {
+      background: #0f172a;
+      border-color: #0f172a;
+      color: #fff;
+      transform: rotate(0deg);
+    }
+    .faq-answer {
+      display: grid;
+      grid-template-rows: 0fr;
+      transition: grid-template-rows 240ms cubic-bezier(.2,.8,.2,1), opacity 200ms ease;
+      opacity: 0;
+    }
+    .faq-item.is-open .faq-answer {
+      grid-template-rows: 1fr;
+      opacity: 1;
+    }
+    .faq-answer__inner {
+      overflow: hidden;
+    }
+    .faq-answer__content {
+      padding: 0 22px 18px;
+      color: #64748b;
+      font-size: 13.5px;
+      line-height: 1.65;
+      border-top: 1px solid #f1f5f9;
+      margin: 0 1px;
+      padding-top: 14px;
+    }
+
+    @media (max-width: 900px) {
+      .faq-grid { grid-template-columns: minmax(0, 1fr); gap: 32px; }
+      .faq-title { font-size: clamp(1.85rem, 7vw, 2.3rem); }
+      .faq-callout { max-width: none; }
+    }
+
     .site-footer {
       position: relative;
       overflow: hidden;
@@ -2883,6 +3074,95 @@
         </div>
       </div>
     </section>
+
+    <!-- FAQ - CalibiAI style -->
+    <section class="faq-section" id="faq" aria-labelledby="faq-title">
+      <div class="page-container faq-grid">
+        <div class="faq-left">
+          <span class="faq-pill"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><circle cx="8" cy="8" r="6.8" stroke="currentColor" stroke-width="1.2"/><path d="M7.6 7.2c0-1 0.9-1.6 1.7-1.9 0.5-.2 0.9-.5 0.9-1.1 0-.7-.6-1.2-1.5-1.2-.7 0-1.3.4-1.6 1.1" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="8" cy="11.3" r="1" fill="currentColor"/></svg> FAQ</span>
+          <h2 class="faq-title" id="faq-title"><span>Got questions?</span><span>We've got answers.</span></h2>
+          <p class="faq-subtitle">Can't find what you're looking for? Email us at <a href="mailto:info@mindlyftai.com">info@mindlyftai.com</a></p>
+          <div class="faq-callout">
+            <span class="faq-callout__icon">?</span>
+            <span><strong>Still unsure?</strong><span>Book a free 15-min call with our team.</span></span>
+          </div>
+        </div>
+
+        <div class="faq-list" role="list">
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a1">
+              <span>Who can join MindLyft AI Academy?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a1">
+              <div class="faq-answer__inner">
+                <div class="faq-answer__content">Anyone with curiosity can join — students, working professionals, founders and career switchers. Whether you're exploring AI for the first time or leveling up for placements, we have a track for you. No prior pedigree required, just commitment to build.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item is-open" role="listitem">
+            <button class="faq-question" aria-expanded="true" aria-controls="faq-a2">
+              <span>Do I need coding experience?</span>
+              <span class="faq-toggle" aria-hidden="true">×</span>
+            </button>
+            <div class="faq-answer" id="faq-a2">
+              <div class="faq-answer__inner">
+                <div class="faq-answer__content">For AI Tools: no. You'll master prompts, no-code automations, and AI workflows. For AI Engineering: basic Python helps but we teach Python, Git, and APIs from scratch. If you can Google, you can start.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a3">
+              <span>Will recordings be available?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a3">
+              <div class="faq-answer__inner">
+                <div class="faq-answer__content">Yes — every live session is recorded and available within 24 hours. Lifetime access to recordings, notes and project templates so you can learn at your pace and revisit anytime.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a4">
+              <span>Will I get a certificate?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a4">
+              <div class="faq-answer__inner">
+                <div class="faq-answer__content">Yes. You get a verified MindLyft AI certificate on completion plus a project portfolio you can showcase on LinkedIn and in interviews. Our certificate is recognized by hiring partners in Pune and beyond.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a5">
+              <span>How are projects taught?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a5">
+              <div class="faq-answer__inner">
+                <div class="faq-answer__content">Live, project-led sessions. Mentors build with you — reviewing your code, giving feedback and helping you ship real projects (RAG chatbots, dashboards, automations) not just slides.</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" role="listitem">
+            <button class="faq-question" aria-expanded="false" aria-controls="faq-a6">
+              <span>Is there placement support?</span>
+              <span class="faq-toggle" aria-hidden="true">+</span>
+            </button>
+            <div class="faq-answer" id="faq-a6">
+              <div class="faq-answer__inner">
+                <div class="faq-answer__content">Yes — that's our Career Accelerator & Placement Readiness promise. Resume and LinkedIn reviews, mock interviews, referral guidance and interview prep until you are placement-ready. 1000+ students trust us, rated 4.9/5.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer class="site-footer" id="contact">
@@ -3106,6 +3386,29 @@
           });
         }, { passive: true });
       }
+
+      /* FAQ accordion - CalibiAI style */
+      const faqItems = document.querySelectorAll('.faq-item');
+      faqItems.forEach(item => {
+        const btn = item.querySelector('.faq-question');
+        const toggle = item.querySelector('.faq-toggle');
+        if (!btn) return;
+        btn.addEventListener('click', () => {
+          const isOpen = item.classList.contains('is-open');
+          faqItems.forEach(i => {
+            i.classList.remove('is-open');
+            const b = i.querySelector('.faq-question');
+            const t = i.querySelector('.faq-toggle');
+            if (b) b.setAttribute('aria-expanded','false');
+            if (t) t.textContent = '+';
+          });
+          if (!isOpen) {
+            item.classList.add('is-open');
+            btn.setAttribute('aria-expanded','true');
+            if (toggle) toggle.textContent = '×';
+          }
+        });
+      });
     })();
   </script>
 </body>
