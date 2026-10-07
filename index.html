@@ -1,0 +1,2079 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#ffffff">
+  <meta name="description" content="Choose an AI career track, build practical projects and get guided toward your first interview with MindLyft AI in Pune.">
+  <title>Career Accelerator &amp; Placement Support Course | MindLyft AI</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com" defer></script>
+
+  <style>
+    :root {
+      color-scheme: light;
+      --white: #ffffff;
+      --sky: #38bdf8;
+      --bright: #0ea5e9;
+      --deep: #0369a1;
+      --tint: #f0f9ff;
+      --slate: #475569;
+      --muted: #64748b;
+      --border: #bae6fd;
+      --ink: #0f3551;
+      --display: "Space Grotesk", "Arial", sans-serif;
+      --body: "DM Sans", "Arial", sans-serif;
+      --mono: "JetBrains Mono", "SFMono-Regular", Consolas, monospace;
+      --content-width: 1160px;
+    }
+
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 92px;
+    }
+
+    body {
+      position: relative;
+      isolation: isolate;
+      min-width: 360px;
+      margin: 0;
+      color: var(--slate);
+      background: var(--white);
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+    }
+
+    body::before {
+      position: fixed;
+      z-index: -1;
+      inset: 0;
+      pointer-events: none;
+      content: "";
+      background-image:
+        radial-gradient(ellipse at 10% 9%, rgba(56, 189, 248, 0.13), transparent 29rem),
+        radial-gradient(ellipse at 88% 17%, rgba(14, 165, 233, 0.09), transparent 27rem),
+        linear-gradient(rgba(14, 165, 233, 0.032) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(14, 165, 233, 0.032) 1px, transparent 1px);
+      background-size: auto, auto, 48px 48px, 48px 48px;
+      mask-image: linear-gradient(to bottom, #000 0%, rgba(0, 0, 0, 0.62) 56%, transparent 100%);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button,
+    a {
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    a:focus-visible,
+    button:focus-visible {
+      outline: 3px solid var(--sky);
+      outline-offset: 4px;
+    }
+
+    svg {
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .page-container {
+      width: min(var(--content-width), calc(100% - 56px));
+      margin-inline: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      z-index: 20;
+      top: 0;
+      border-bottom: 1px solid rgba(186, 230, 253, 0.62);
+      background: rgba(255, 255, 255, 0.84);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+    }
+
+    .nav-inner {
+      display: flex;
+      min-height: 78px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      color: var(--ink);
+      font-family: var(--display);
+      font-size: 19px;
+      font-weight: 700;
+      letter-spacing: -0.055em;
+      white-space: nowrap;
+    }
+
+    .brand-mark {
+      width: 40px;
+      height: 40px;
+      filter: drop-shadow(0 4px 8px rgba(14, 165, 233, 0.13));
+    }
+
+    .brand__ai {
+      color: var(--bright);
+    }
+
+    .button {
+      display: inline-flex;
+      min-height: 50px;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 0 21px;
+      border: 1px solid transparent;
+      border-radius: 14px;
+      font-family: var(--body);
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.2;
+      transition: color 180ms ease, background-color 180ms ease, border-color 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+    }
+
+    .button svg {
+      width: 17px;
+      height: 17px;
+      transition: transform 180ms ease;
+    }
+
+    .button:hover svg {
+      transform: translateX(3px);
+    }
+
+    .button--primary {
+      color: var(--white);
+      background: var(--deep);
+      box-shadow: 0 8px 18px rgba(3, 105, 161, 0.18);
+    }
+
+    .button--primary:hover {
+      transform: translateY(-2px);
+      background: #075985;
+      box-shadow: 0 12px 24px rgba(3, 105, 161, 0.22);
+    }
+
+    .button--outline {
+      border-color: var(--border);
+      color: var(--deep);
+      background: rgba(255, 255, 255, 0.78);
+      box-shadow: 0 3px 10px rgba(3, 105, 161, 0.04);
+    }
+
+    .button--outline:hover {
+      transform: translateY(-2px);
+      border-color: var(--sky);
+      background: var(--tint);
+      box-shadow: 0 9px 20px rgba(3, 105, 161, 0.08);
+    }
+
+    .button--nav {
+      min-height: 43px;
+      padding-inline: 17px;
+      border-radius: 12px;
+      font-size: 13px;
+    }
+
+    .hero {
+      padding-block: 83px 112px;
+    }
+
+    .hero__grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.05fr) minmax(0, 0.95fr);
+      align-items: center;
+      gap: clamp(44px, 7vw, 92px);
+    }
+
+    .hero__copy {
+      max-width: 625px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 22px;
+      padding: 7px 12px;
+      border: 1px solid rgba(186, 230, 253, 0.88);
+      border-radius: 999px;
+      color: #075985;
+      background: rgba(240, 249, 255, 0.86);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: -0.015em;
+    }
+
+    .eyebrow__dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--bright);
+      box-shadow: 0 0 0 4px rgba(56, 189, 248, 0.13);
+    }
+
+    h1,
+    h2,
+    h3,
+    p {
+      margin-top: 0;
+    }
+
+    h1,
+    h2,
+    h3 {
+      color: var(--deep);
+      font-family: var(--display);
+    }
+
+    .hero h1 {
+      max-width: 690px;
+      margin-bottom: 22px;
+      color: #0b4167;
+      font-size: clamp(3.05rem, 5.3vw, 4.55rem);
+      font-weight: 600;
+      letter-spacing: -0.072em;
+      line-height: 1.055;
+    }
+
+    .hero__title-line {
+      display: block;
+    }
+
+    .hero__amp {
+      color: var(--bright);
+    }
+
+    .hero__description {
+      max-width: 550px;
+      margin-bottom: 0;
+      color: var(--slate);
+      font-size: 17px;
+      line-height: 1.78;
+    }
+
+    .hero__actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 12px;
+      margin-top: 31px;
+    }
+
+    .hero__note {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-top: 26px;
+      color: #526b7d;
+      font-size: 13px;
+    }
+
+    .hero__note p {
+      margin: 0;
+    }
+
+    .hero__note strong {
+      color: #155e86;
+      font-weight: 700;
+    }
+
+    .hero__note-icon {
+      display: grid;
+      width: 31px;
+      height: 31px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid #d5effc;
+      border-radius: 10px;
+      color: var(--bright);
+      background: #f5fbff;
+    }
+
+    .hero__note-icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .terminal-stage {
+      position: relative;
+      width: 100%;
+      max-width: 530px;
+      justify-self: end;
+      isolation: isolate;
+    }
+
+    .terminal-stage::before {
+      position: absolute;
+      z-index: -1;
+      top: 12%;
+      right: -8%;
+      bottom: -8%;
+      left: 9%;
+      border-radius: 50%;
+      background: rgba(125, 211, 252, 0.28);
+      content: "";
+      filter: blur(44px);
+    }
+
+    .terminal-card {
+      position: relative;
+      overflow: hidden;
+      border: 1px solid rgba(186, 230, 253, 0.94);
+      border-radius: 22px;
+      background: rgba(255, 255, 255, 0.96);
+      box-shadow: 0 28px 70px rgba(3, 105, 161, 0.12), 0 5px 15px rgba(15, 53, 81, 0.045);
+    }
+
+    .terminal-topbar {
+      display: flex;
+      min-height: 57px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 14px;
+      padding: 0 20px;
+      border-bottom: 1px solid #e8f5fc;
+      background: rgba(255, 255, 255, 0.94);
+    }
+
+    .terminal-topbar__left,
+    .terminal-topbar__right {
+      display: flex;
+      align-items: center;
+    }
+
+    .terminal-topbar__left {
+      gap: 7px;
+    }
+
+    .terminal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #c6eafb;
+    }
+
+    .terminal-dot:first-child {
+      background: #7dd3fc;
+    }
+
+    .terminal-window-title {
+      margin-left: 8px;
+      color: #668398;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: -0.02em;
+    }
+
+    .terminal-topbar__right {
+      gap: 7px;
+      color: #5d7a8e;
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .terminal-online {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #38bdf8;
+      box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.12);
+    }
+
+    .terminal-body {
+      padding: 24px 25px 20px;
+      background: linear-gradient(180deg, rgba(248, 252, 255, 0.92), rgba(255, 255, 255, 0.96));
+    }
+
+    .terminal-intro {
+      margin-bottom: 16px;
+      color: #5c7b90;
+      font-size: 12px;
+    }
+
+    .terminal-intro strong {
+      color: #155e86;
+      font-weight: 700;
+    }
+
+    .terminal-command {
+      display: flex;
+      min-height: 58px;
+      align-items: center;
+      gap: 9px;
+      padding: 13px 14px;
+      border: 1px solid #d8effa;
+      border-radius: 12px;
+      color: #165e87;
+      background: #f0f9ff;
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.7;
+      overflow-wrap: anywhere;
+    }
+
+    .terminal-prompt {
+      color: var(--bright);
+      font-weight: 600;
+    }
+
+    .terminal-command__text {
+      min-width: 0;
+      color: #155e86;
+    }
+
+    .terminal-cursor {
+      display: inline-block;
+      width: 7px;
+      height: 16px;
+      flex: 0 0 auto;
+      border-radius: 1px;
+      background: #0ea5e9;
+      animation: cursor-blink 1s steps(2, start) infinite;
+    }
+
+    @keyframes cursor-blink {
+      to { visibility: hidden; }
+    }
+
+    .terminal-output {
+      margin-top: 17px;
+      padding: 17px 17px 16px;
+      border: 1px solid #e0f2fe;
+      border-radius: 13px;
+      background: rgba(255, 255, 255, 0.9);
+      transition: border-color 180ms ease, background-color 180ms ease, transform 180ms ease;
+    }
+
+    .terminal-output.is-pending {
+      border-color: #e5f2f8;
+      background: #fbfdff;
+    }
+
+    .terminal-output__top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 10px;
+      margin-bottom: 8px;
+      color: #5f7b8e;
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .terminal-output__state {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .terminal-check {
+      display: grid;
+      width: 16px;
+      height: 16px;
+      place-items: center;
+      border-radius: 50%;
+      color: #0369a1;
+      background: #e0f2fe;
+      font-family: var(--body);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .terminal-output__badge {
+      padding: 4px 7px;
+      border-radius: 6px;
+      color: #0369a1;
+      background: #f0f9ff;
+      font-size: 9px;
+      white-space: nowrap;
+    }
+
+    .terminal-output__name {
+      margin: 0 0 4px;
+      color: #104b70;
+      font-family: var(--display);
+      font-size: 17px;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+      line-height: 1.35;
+    }
+
+    .terminal-output__meta {
+      margin: 0;
+      color: #6a8496;
+      font-size: 11px;
+    }
+
+    .terminal-output__hours {
+      color: #0369a1;
+      font-weight: 700;
+    }
+
+    .terminal-bottom {
+      margin-top: 18px;
+    }
+
+    .terminal-progress {
+      height: 3px;
+      overflow: hidden;
+      border-radius: 99px;
+      background: #eaf6fc;
+    }
+
+    .terminal-progress__fill {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border-radius: inherit;
+      background: linear-gradient(90deg, #7dd3fc, #0ea5e9);
+      transform-origin: left;
+      transition: transform 280ms ease;
+    }
+
+    .terminal-progress__fill.is-empty {
+      transform: scaleX(0.04);
+    }
+
+    .terminal-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      padding-top: 12px;
+      color: #7590a1;
+      font-family: var(--mono);
+      font-size: 9px;
+    }
+
+    .terminal-footer__hint {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .terminal-footer__hint svg {
+      width: 12px;
+      height: 12px;
+      color: #0ea5e9;
+    }
+
+    .terminal-float {
+      position: absolute;
+      right: -18px;
+      bottom: -23px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      padding: 11px 14px 11px 11px;
+      border: 1px solid rgba(186, 230, 253, 0.96);
+      border-radius: 14px;
+      color: #155e86;
+      background: rgba(255, 255, 255, 0.97);
+      box-shadow: 0 12px 30px rgba(3, 105, 161, 0.12);
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .terminal-float__icon {
+      display: grid;
+      width: 30px;
+      height: 30px;
+      place-items: center;
+      border-radius: 9px;
+      color: #0284c7;
+      background: #e0f2fe;
+    }
+
+    .terminal-float__icon svg {
+      width: 16px;
+      height: 16px;
+    }
+
+    .section {
+      padding-block: 91px;
+    }
+
+    .section--wash {
+      position: relative;
+      background: linear-gradient(180deg, rgba(240, 249, 255, 0.66), rgba(240, 249, 255, 0.46));
+    }
+
+    .section--wash::before,
+    .section--wash::after {
+      position: absolute;
+      right: 0;
+      left: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(186, 230, 253, 0.67), transparent);
+      content: "";
+    }
+
+    .section--wash::before { top: 0; }
+    .section--wash::after { bottom: 0; }
+
+    .section-heading {
+      max-width: 720px;
+      margin: 0 auto 42px;
+      text-align: center;
+    }
+
+    .section-kicker {
+      display: inline-block;
+      margin-bottom: 10px;
+      color: #0284c7;
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: -0.02em;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 13px;
+      color: #0b4167;
+      font-size: clamp(2rem, 3.5vw, 2.7rem);
+      font-weight: 600;
+      letter-spacing: -0.06em;
+      line-height: 1.17;
+    }
+
+    .section-heading p {
+      max-width: 580px;
+      margin: 0 auto;
+      color: var(--slate);
+      font-size: 15px;
+      line-height: 1.75;
+    }
+
+    .course-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .course-card {
+      position: relative;
+      display: flex;
+      min-height: 318px;
+      flex-direction: column;
+      overflow: hidden;
+      padding: 24px 24px 23px;
+      border: 1px solid var(--border);
+      border-radius: 19px;
+      color: var(--slate);
+      background: rgba(255, 255, 255, 0.94);
+      box-shadow: 0 5px 18px rgba(3, 105, 161, 0.055);
+      transition: transform 220ms ease, border-color 220ms ease, box-shadow 220ms ease, background-color 220ms ease;
+    }
+
+    .course-card::after {
+      position: absolute;
+      top: -56px;
+      right: -54px;
+      width: 145px;
+      height: 145px;
+      border-radius: 50%;
+      background: rgba(224, 242, 254, 0.48);
+      content: "";
+      transition: transform 300ms ease, background-color 220ms ease;
+    }
+
+    .course-card:hover {
+      z-index: 1;
+      transform: translateY(-7px);
+      border-color: var(--sky);
+      background: #fff;
+      box-shadow: 0 19px 38px rgba(3, 105, 161, 0.13), 0 0 0 4px rgba(56, 189, 248, 0.08);
+    }
+
+    .course-card:hover::after {
+      transform: scale(1.18);
+      background: rgba(186, 230, 253, 0.46);
+    }
+
+    .course-card:focus-visible {
+      outline: 3px solid var(--sky);
+      outline-offset: 4px;
+      border-color: var(--bright);
+    }
+
+    .course-card__head,
+    .course-card__body,
+    .course-card__link {
+      position: relative;
+      z-index: 1;
+    }
+
+    .course-card__head {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    .course-card__icon {
+      display: grid;
+      width: 49px;
+      height: 49px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid #d5effc;
+      border-radius: 14px;
+      color: #0284c7;
+      background: #f0f9ff;
+    }
+
+    .course-card__icon svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    .course-card--ml .course-card__icon {
+      border-color: #c8ebfb;
+      color: #0369a1;
+      background: #eaf7fe;
+    }
+
+    .course-card--tools .course-card__icon {
+      border-color: #d7ecf8;
+      color: #0b75a8;
+      background: #f1faff;
+    }
+
+    .course-card__hours {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      padding: 6px 9px;
+      border: 1px solid #d8effa;
+      border-radius: 999px;
+      color: #155e86;
+      background: #f7fcff;
+      font-family: var(--mono);
+      font-size: 10px;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+
+    .course-card__hours svg {
+      width: 13px;
+      height: 13px;
+      color: #0ea5e9;
+    }
+
+    .course-card__eyebrow {
+      display: block;
+      margin-bottom: 7px;
+      color: #0e7490;
+      font-size: 11px;
+      font-weight: 700;
+    }
+
+    .course-card h3 {
+      max-width: 290px;
+      margin-bottom: 9px;
+      color: #104b70;
+      font-size: 21px;
+      font-weight: 600;
+      letter-spacing: -0.05em;
+      line-height: 1.27;
+    }
+
+    .course-card p {
+      margin: 0;
+      color: #5b7180;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .course-card__link {
+      display: inline-flex;
+      width: fit-content;
+      align-items: center;
+      gap: 8px;
+      margin-top: auto;
+      padding-top: 26px;
+      color: #0369a1;
+      font-size: 13px;
+      font-weight: 700;
+      transition: color 180ms ease;
+    }
+
+    .course-card__link svg {
+      width: 16px;
+      height: 16px;
+      transition: transform 180ms ease;
+    }
+
+    .course-card:hover .course-card__link {
+      color: #0284c7;
+    }
+
+    .course-card:hover .course-card__link svg {
+      transform: translateX(4px);
+    }
+
+    .path-section {
+      padding-block: 94px 100px;
+    }
+
+    .timeline {
+      position: relative;
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 18px;
+      margin-top: 54px;
+    }
+
+    .timeline::before {
+      position: absolute;
+      top: 22px;
+      right: 12.5%;
+      left: 12.5%;
+      height: 1px;
+      background: linear-gradient(90deg, #bae6fd, #38bdf8 50%, #bae6fd);
+      content: "";
+    }
+
+    .timeline-step {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+    }
+
+    .timeline-step__marker {
+      display: grid;
+      width: 45px;
+      height: 45px;
+      margin: 0 auto 17px;
+      place-items: center;
+      border: 1px solid #9eddf8;
+      border-radius: 50%;
+      color: #0369a1;
+      background: #fff;
+      box-shadow: 0 0 0 6px rgba(240, 249, 255, 0.84);
+      font-family: var(--mono);
+      font-size: 11px;
+      font-weight: 600;
+    }
+
+    .timeline-step:nth-child(2) .timeline-step__marker {
+      border-color: #7dd3fc;
+      background: #f6fcff;
+    }
+
+    .timeline-step:nth-child(3) .timeline-step__marker {
+      border-color: #38bdf8;
+      color: #075985;
+      background: #f0f9ff;
+    }
+
+    .timeline-step:nth-child(4) .timeline-step__marker {
+      border-color: #0ea5e9;
+      color: #fff;
+      background: #0ea5e9;
+      box-shadow: 0 0 0 6px rgba(240, 249, 255, 0.84), 0 5px 12px rgba(14, 165, 233, 0.2);
+    }
+
+    .timeline-step h3 {
+      margin-bottom: 6px;
+      color: #104b70;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: -0.035em;
+    }
+
+    .timeline-step p {
+      max-width: 215px;
+      margin: 0 auto;
+      color: #617687;
+      font-size: 13px;
+      line-height: 1.65;
+    }
+
+    .reviews-section {
+      padding-block: 90px 98px;
+    }
+
+    .review-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .review-card {
+      display: flex;
+      min-height: 263px;
+      flex-direction: column;
+      padding: 23px 23px 22px;
+      border: 1px solid #dceef8;
+      border-left: 3px solid var(--sky);
+      border-radius: 5px 17px 17px 5px;
+      background: rgba(255, 255, 255, 0.91);
+      box-shadow: 0 6px 20px rgba(3, 105, 161, 0.045);
+    }
+
+    .review-card:nth-child(2) {
+      border-left-color: #0ea5e9;
+      background: linear-gradient(145deg, #fff, #f9fdff);
+    }
+
+    .review-card:nth-child(3) {
+      border-left-color: #7dd3fc;
+    }
+
+    .review-rating {
+      display: flex;
+      gap: 3px;
+      margin-bottom: 15px;
+      color: #0284c7;
+      font-size: 15px;
+      letter-spacing: 0.02em;
+      line-height: 1;
+    }
+
+    .review-card blockquote {
+      margin: 0 0 22px;
+      color: #405e72;
+      font-size: 14px;
+      line-height: 1.78;
+    }
+
+    .review-person {
+      display: flex;
+      align-items: center;
+      gap: 11px;
+      margin-top: auto;
+    }
+
+    .review-avatar {
+      display: grid;
+      width: 37px;
+      height: 37px;
+      flex: 0 0 auto;
+      place-items: center;
+      border: 1px solid #d1edfa;
+      border-radius: 50%;
+      color: #0369a1;
+      background: #eff9ff;
+      font-family: var(--display);
+      font-size: 12px;
+      font-weight: 700;
+    }
+
+    .review-person__name {
+      display: block;
+      color: #164d6e;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .review-person__role {
+      display: block;
+      margin-top: 2px;
+      color: #718596;
+      font-size: 11px;
+      line-height: 1.35;
+    }
+
+    .cta-section {
+      padding-block: 4px 90px;
+    }
+
+    .cta-banner {
+      position: relative;
+      display: flex;
+      min-height: 242px;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+      overflow: hidden;
+      padding: 44px 54px;
+      border: 1px solid rgba(125, 211, 252, 0.86);
+      border-radius: 26px;
+      background: linear-gradient(112deg, #e0f2fe 0%, #bae6fd 53%, #7dd3fc 100%);
+      box-shadow: 0 20px 45px rgba(3, 105, 161, 0.11);
+    }
+
+    .cta-banner::before,
+    .cta-banner::after {
+      position: absolute;
+      border: 1px solid rgba(255, 255, 255, 0.42);
+      border-radius: 50%;
+      content: "";
+      pointer-events: none;
+    }
+
+    .cta-banner::before {
+      top: -150px;
+      right: 11%;
+      width: 345px;
+      height: 345px;
+    }
+
+    .cta-banner::after {
+      top: -112px;
+      right: 15%;
+      width: 270px;
+      height: 270px;
+      border-color: rgba(255, 255, 255, 0.32);
+    }
+
+    .cta-banner__copy,
+    .cta-banner__action {
+      position: relative;
+      z-index: 1;
+    }
+
+    .cta-banner__copy {
+      max-width: 590px;
+    }
+
+    .cta-banner__kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      margin-bottom: 10px;
+      color: #075985;
+      font-family: var(--mono);
+      font-size: 10px;
+    }
+
+    .cta-banner__kicker svg {
+      width: 14px;
+      height: 14px;
+    }
+
+    .cta-banner h2 {
+      margin-bottom: 9px;
+      color: #073e61;
+      font-size: clamp(2rem, 3.8vw, 2.8rem);
+      font-weight: 600;
+      letter-spacing: -0.06em;
+      line-height: 1.15;
+    }
+
+    .cta-banner p {
+      max-width: 500px;
+      margin: 0;
+      color: #285d7b;
+      font-size: 14px;
+      line-height: 1.7;
+    }
+
+    .cta-banner .button {
+      flex: 0 0 auto;
+      border-color: #075985;
+      color: #fff;
+      background: #075985;
+      box-shadow: 0 10px 20px rgba(3, 105, 161, 0.18);
+    }
+
+    .cta-banner .button:hover {
+      border-color: #064e72;
+      background: #064e72;
+    }
+
+    .site-footer {
+      position: relative;
+      overflow: hidden;
+      border-top: 1px solid #e8e2f4;
+      background:
+        radial-gradient(ellipse at 4% 4%, rgba(196, 181, 253, 0.2), transparent 32rem),
+        radial-gradient(ellipse at 96% 22%, rgba(196, 181, 253, 0.13), transparent 30rem),
+        linear-gradient(108deg, #f6f2ff 0%, #ffffff 49%, #f8f5ff 100%);
+    }
+
+    .footer-container {
+      width: min(1408px, calc(100% - 160px));
+      margin-inline: auto;
+    }
+
+    .footer-main {
+      display: grid;
+      grid-template-columns: minmax(250px, 1.25fr) minmax(130px, 0.9fr) minmax(270px, 1.22fr) minmax(200px, 1.06fr);
+      gap: clamp(28px, 4vw, 64px);
+      padding-block: 39px 34px;
+    }
+
+    .footer-brand .brand {
+      gap: 12px;
+      color: #111827;
+      font-size: 23px;
+    }
+
+    .footer-brand .brand-mark {
+      width: 42px;
+      height: 42px;
+      filter: none;
+    }
+
+    .footer-brand__description {
+      max-width: 315px;
+      margin: 14px 0 21px;
+      color: #5e6877;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .footer-socials {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .footer-social-link {
+      display: grid;
+      width: 34px;
+      height: 34px;
+      place-items: center;
+      border: 1px solid transparent;
+      border-radius: 10px;
+      color: #8b5cf6;
+      background: rgba(139, 92, 246, 0.045);
+      transition: transform 170ms ease, color 170ms ease, background-color 170ms ease, border-color 170ms ease;
+    }
+
+    .footer-social-link:hover {
+      transform: translateY(-2px);
+      border-color: #e3d8ff;
+      color: #7c3aed;
+      background: #f1eaff;
+    }
+
+    .footer-social-link svg {
+      width: 17px;
+      height: 17px;
+    }
+
+    .footer-column h2 {
+      margin: 4px 0 19px;
+      color: #161923;
+      font-family: var(--body);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.045em;
+      line-height: 1.4;
+    }
+
+    .footer-link-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-link-list li {
+      color: #46505d;
+      font-size: 14px;
+      line-height: 1.45;
+    }
+
+    .footer-link {
+      color: inherit;
+      transition: color 160ms ease;
+    }
+
+    .footer-link:hover {
+      color: #7c3aed;
+    }
+
+    .footer-contact-list {
+      display: flex;
+      flex-direction: column;
+      gap: 17px;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .footer-contact-item {
+      display: grid;
+      grid-template-columns: 17px minmax(0, 1fr);
+      align-items: start;
+      gap: 12px;
+      color: #46505d;
+      font-size: 14px;
+      line-height: 1.65;
+    }
+
+    .footer-contact-item svg {
+      width: 16px;
+      height: 16px;
+      margin-top: 3px;
+      color: #9b72e8;
+    }
+
+    .footer-contact-item a {
+      color: inherit;
+      transition: color 160ms ease;
+    }
+
+    .footer-contact-item a:hover {
+      color: #7c3aed;
+    }
+
+    .footer-contact-item address {
+      font-style: normal;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid rgba(148, 131, 181, 0.2);
+    }
+
+    .footer-bottom__inner {
+      display: flex;
+      min-height: 62px;
+      align-items: center;
+      color: #687382;
+      font-size: 12px;
+    }
+
+    .footer-bottom__inner p {
+      margin: 0;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0, 0, 0, 0);
+      white-space: nowrap;
+      border: 0;
+    }
+
+    @media (max-width: 1120px) {
+      .footer-container {
+        width: calc(100% - 56px);
+      }
+
+      .footer-main {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 34px 64px;
+        padding-block: 36px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .footer-container {
+        width: calc(100% - 38px);
+      }
+
+      .footer-main {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 29px;
+        padding-block: 32px;
+      }
+
+      .footer-brand__description {
+        max-width: 360px;
+        margin-block: 12px 17px;
+      }
+
+      .footer-column h2 {
+        margin-bottom: 13px;
+      }
+
+      .footer-bottom__inner {
+        min-height: 57px;
+      }
+    }
+
+    @media (max-width: 980px) {
+      .hero {
+        padding-block: 68px 92px;
+      }
+
+      .hero__grid {
+        grid-template-columns: minmax(0, 1fr) minmax(0, 0.92fr);
+        gap: 35px;
+      }
+
+      .hero h1 {
+        font-size: clamp(3rem, 6vw, 4rem);
+      }
+
+      .terminal-float {
+        right: 8px;
+      }
+
+      .course-card {
+        padding-inline: 20px;
+      }
+
+      .course-card h3 {
+        font-size: 20px;
+      }
+
+      .cta-banner {
+        padding-inline: 40px;
+      }
+    }
+
+    @media (max-width: 760px) {
+      .page-container {
+        width: min(var(--content-width), calc(100% - 44px));
+      }
+
+      .hero__grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 55px;
+      }
+
+      .hero__copy {
+        max-width: 680px;
+      }
+
+      .hero__description {
+        max-width: 600px;
+      }
+
+      .terminal-stage {
+        max-width: 590px;
+        justify-self: center;
+      }
+
+      .course-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .course-card:last-child {
+        grid-column: 1 / -1;
+        min-height: 285px;
+      }
+
+      .course-card:last-child h3 {
+        max-width: 440px;
+      }
+
+      .review-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .review-card:last-child {
+        grid-column: 1 / -1;
+        min-height: 225px;
+      }
+
+      .cta-banner {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 23px;
+        padding: 38px 35px;
+      }
+    }
+
+    @media (max-width: 600px) {
+      html {
+        scroll-padding-top: 78px;
+      }
+
+      .page-container {
+        width: calc(100% - 38px);
+      }
+
+      .nav-inner {
+        min-height: 70px;
+      }
+
+      .brand {
+        gap: 9px;
+        font-size: 17px;
+      }
+
+      .brand-mark {
+        width: 36px;
+        height: 36px;
+      }
+
+      .button--nav {
+        min-height: 40px;
+        padding-inline: 13px;
+        font-size: 12px;
+      }
+
+      .hero {
+        padding-block: 55px 77px;
+      }
+
+      .hero__grid {
+        gap: 46px;
+      }
+
+      .eyebrow {
+        margin-bottom: 18px;
+        font-size: 10px;
+      }
+
+      .hero h1 {
+        max-width: 530px;
+        margin-bottom: 17px;
+        font-size: clamp(2.6rem, 10vw, 3.55rem);
+        letter-spacing: -0.07em;
+      }
+
+      .hero__description {
+        font-size: 15px;
+        line-height: 1.75;
+      }
+
+      .hero__actions {
+        gap: 10px;
+        margin-top: 24px;
+      }
+
+      .hero__actions .button {
+        min-height: 47px;
+        padding-inline: 16px;
+        font-size: 13px;
+      }
+
+      .hero__note {
+        margin-top: 20px;
+        font-size: 12px;
+      }
+
+      .terminal-card {
+        border-radius: 18px;
+      }
+
+      .terminal-topbar {
+        min-height: 51px;
+        padding-inline: 15px;
+      }
+
+      .terminal-body {
+        padding: 20px 16px 17px;
+      }
+
+      .terminal-command {
+        gap: 7px;
+        padding: 11px 10px;
+        font-size: 10px;
+      }
+
+      .terminal-output {
+        padding: 14px 13px;
+      }
+
+      .terminal-output__name {
+        font-size: 16px;
+      }
+
+      .terminal-float {
+        right: 10px;
+        bottom: -18px;
+        padding: 8px 10px;
+        font-size: 10px;
+      }
+
+      .terminal-float__icon {
+        width: 26px;
+        height: 26px;
+      }
+
+      .section,
+      .path-section,
+      .reviews-section {
+        padding-block: 73px;
+      }
+
+      .section-heading {
+        margin-bottom: 31px;
+      }
+
+      .section-heading h2 {
+        font-size: clamp(1.9rem, 8vw, 2.35rem);
+      }
+
+      .section-heading p {
+        font-size: 14px;
+      }
+
+      .course-grid,
+      .review-grid {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 14px;
+      }
+
+      .course-card,
+      .course-card:last-child {
+        grid-column: auto;
+        min-height: 287px;
+        padding: 21px;
+      }
+
+      .course-card__head {
+        margin-bottom: 21px;
+      }
+
+      .course-card h3 {
+        max-width: 360px;
+        font-size: 21px;
+      }
+
+      .timeline {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 0;
+        margin-top: 37px;
+      }
+
+      .timeline::before {
+        top: 23px;
+        bottom: 23px;
+        left: 22px;
+        width: 1px;
+        height: auto;
+        background: linear-gradient(180deg, #bae6fd, #38bdf8 50%, #bae6fd);
+      }
+
+      .timeline-step {
+        display: grid;
+        grid-template-columns: 46px minmax(0, 1fr);
+        column-gap: 15px;
+        padding-bottom: 24px;
+        text-align: left;
+      }
+
+      .timeline-step:last-child {
+        padding-bottom: 0;
+      }
+
+      .timeline-step__marker {
+        grid-row: 1 / span 2;
+        width: 45px;
+        height: 45px;
+        margin: 0;
+      }
+
+      .timeline-step h3 {
+        align-self: end;
+        margin: 0 0 3px;
+        padding-top: 1px;
+      }
+
+      .timeline-step p {
+        max-width: 340px;
+        margin: 0;
+      }
+
+      .review-card,
+      .review-card:last-child {
+        grid-column: auto;
+        min-height: 235px;
+        padding: 21px;
+      }
+
+      .cta-section {
+        padding-block: 0 67px;
+      }
+
+      .cta-banner {
+        min-height: auto;
+        gap: 21px;
+        padding: 31px 25px;
+        border-radius: 21px;
+      }
+
+      .cta-banner::before {
+        right: -31%;
+      }
+
+      .cta-banner::after {
+        right: -20%;
+      }
+
+      .cta-banner h2 {
+        font-size: clamp(1.85rem, 8.2vw, 2.35rem);
+      }
+
+      .cta-banner p {
+        font-size: 13px;
+      }
+
+      .footer-inner {
+        min-height: 69px;
+        font-size: 11px;
+      }
+    }
+
+    @media (max-width: 390px) {
+      .page-container {
+        width: calc(100% - 34px);
+      }
+
+      .hero__actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero__actions .button {
+        width: 100%;
+      }
+
+      .terminal-float {
+        right: 7px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *,
+      *::before,
+      *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+
+      .terminal-cursor {
+        animation: none !important;
+        visibility: visible;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header sticky top-0 z-50 w-full">
+    <nav class="page-container nav-inner mx-auto flex items-center justify-between" aria-label="Main navigation">
+      <a class="brand" href="#top" aria-label="MindLyft AI home">
+        <svg class="brand-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+          <rect x="1" y="1" width="42" height="42" rx="14" fill="#F0F9FF" stroke="#BAE6FD" />
+          <path d="M21.7 12.6a5.4 5.4 0 0 0-9.2 3.9c0 .7.1 1.3.4 1.9a4.5 4.5 0 0 0 .4 8.3 5.3 5.3 0 0 0 8.4 3.9V12.6Z" stroke="#0369A1" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M22.3 12.6a5.4 5.4 0 0 1 9.2 3.9c0 .7-.1 1.3-.4 1.9a4.5 4.5 0 0 1-.4 8.3 5.3 5.3 0 0 1-8.4 3.9V12.6Z" stroke="#0EA5E9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+          <path d="M22 10.8v23M14.2 17.9h4.1m-4.3 6.7h4.7m7.1-6.7h4.1m-4.5 6.7h4.7" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" />
+          <circle cx="18.3" cy="17.9" r="1.2" fill="#0369A1" />
+          <circle cx="25.7" cy="24.6" r="1.2" fill="#0369A1" />
+        </svg>
+        <span>MindLyft <span class="brand__ai">AI</span></span>
+      </a>
+      <a class="button button--primary button--nav" href="#courses">
+        View courses
+        <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+      </a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="page-container hero__grid grid items-center lg:grid-cols-2">
+        <div class="hero__copy">
+          <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> AI training in Pune, India</p>
+          <h1 id="hero-title"><span class="hero__title-line">Career Accelerator</span><span class="hero__title-line"><span class="hero__amp">&amp;</span> Placement Support</span></h1>
+          <p class="hero__description">Pick the AI track that fits your goals, learn by building real projects, and get guided step by step toward your first interview.</p>
+          <div class="hero__actions flex flex-wrap items-center">
+            <a class="button button--primary" href="#courses">
+              Choose your course
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg>
+            </a>
+            <a class="button button--outline" href="#path">See how it works</a>
+          </div>
+          <div class="hero__note">
+            <span class="hero__note-icon" aria-hidden="true">
+              <svg viewBox="0 0 20 20" fill="none"><path d="M10 2.7 12.2 7l4.8.7-3.5 3.4.8 4.8-4.3-2.3-4.3 2.3.8-4.8L3 7.7 7.8 7 10 2.7Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round" /></svg>
+            </span>
+            <p><strong>30 focused hours.</strong> Practical skills with a clear next step.</p>
+          </div>
+        </div>
+
+        <div class="terminal-stage">
+          <div class="terminal-card" aria-label="Interactive preview of course tracks">
+            <div class="terminal-topbar">
+              <div class="terminal-topbar__left" aria-hidden="true">
+                <span class="terminal-dot"></span><span class="terminal-dot"></span><span class="terminal-dot"></span>
+                <span class="terminal-window-title">mindlyft / career console</span>
+              </div>
+              <div class="terminal-topbar__right"><span class="terminal-online" aria-hidden="true"></span><span>ready</span></div>
+            </div>
+            <div class="terminal-body">
+              <div class="terminal-intro">A simple command for a <strong>clear next move.</strong></div>
+              <div class="terminal-command" aria-hidden="true">
+                <span class="terminal-prompt">$</span>
+                <span class="terminal-command__text" id="typed-command">mindlyft start --track data-analyst</span>
+                <span class="terminal-cursor"></span>
+              </div>
+              <div class="terminal-output" id="terminal-output" aria-hidden="true">
+                <div class="terminal-output__top">
+                  <span class="terminal-output__state"><span class="terminal-check">✓</span><span id="terminal-state">Track selected</span></span>
+                  <span class="terminal-output__badge">career track</span>
+                </div>
+                <p class="terminal-output__name" id="terminal-course">Fundamentals of Data Analytics</p>
+                <p class="terminal-output__meta"><span class="terminal-output__hours" id="terminal-hours">30 hours</span> <span aria-hidden="true">·</span> project-led learning</p>
+              </div>
+              <div class="terminal-bottom" aria-hidden="true">
+                <div class="terminal-progress"><span class="terminal-progress__fill" id="terminal-progress"></span></div>
+                <div class="terminal-footer">
+                  <span class="terminal-footer__hint">
+                    <svg viewBox="0 0 16 16" fill="none"><path d="M8 2.2v2.1m0 7.4v2.1m5.8-5.8h-2.1m-7.4 0H2.2m10-4.1-1.5 1.5M5.3 10.7l-1.5 1.5m8.2 0-1.5-1.5m-5.2-5.2L3.8 4" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" /><circle cx="8" cy="8" r="2.1" stroke="currentColor" stroke-width="1.4" /></svg>
+                    course preview
+                  </span>
+                  <span>3 tracks · one next step</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="terminal-float" aria-hidden="true">
+            <span class="terminal-float__icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2.5v15m-7.5-7.5h15M4.7 4.7l10.6 10.6m0-10.6L4.7 15.3" stroke="currentColor" stroke-width="1.35" stroke-linecap="round" /></svg></span>
+            Real projects, real progress
+          </div>
+          <p class="sr-only" id="terminal-announcement" aria-live="polite">Terminal preview: Fundamentals of Data Analytics, 30 hours.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section--wash" id="courses" aria-labelledby="courses-title">
+      <div class="page-container">
+        <div class="section-heading">
+          <span class="section-kicker">Choose your starting point</span>
+          <h2 id="courses-title">Find the course that moves you forward</h2>
+          <p>Three focused tracks to help you build practical AI skills, one confident step at a time.</p>
+        </div>
+
+        <div class="course-grid grid md:grid-cols-2 lg:grid-cols-3">
+          <a class="course-card course-card--data" href="https://learn.mindlyftai.com/data_analyst_classes/" target="_blank" rel="noopener noreferrer" aria-label="View course: Fundamentals of Data Analytics, 30 hours">
+            <div class="course-card__head">
+              <span class="course-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M4 19.5h16M6.5 16V11m5.5 5V5m5.5 11V8" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /><path d="m5.8 8.3 5.9-4 5.8 2.4 1.1-1.2" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              </span>
+              <span class="course-card__hours"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.7" stroke="currentColor" stroke-width="1.3" /><path d="M8 4.7V8l2.2 1.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>30 hours</span>
+            </div>
+            <div class="course-card__body">
+              <span class="course-card__eyebrow">See the signal in the noise</span>
+              <h3>Fundamentals of Data Analytics</h3>
+              <p>Find the story inside data.</p>
+            </div>
+            <span class="course-card__link">View course <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+          </a>
+
+          <a class="course-card course-card--ml" href="https://learn.mindlyftai.com/ai_and_ml_courses/" target="_blank" rel="noopener noreferrer" aria-label="View course: Machine Learning with AI, 30 hours">
+            <div class="course-card__head">
+              <span class="course-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="M6.2 6.1 12 12l5.8-5.9M6.2 17.8 12 12l5.8 5.8M6.2 6.1v11.7m11.6-11.7v11.7" stroke="currentColor" stroke-width="1.45" stroke-linecap="round" stroke-linejoin="round" /><circle cx="6.2" cy="6.1" r="2.2" fill="#fff" stroke="currentColor" stroke-width="1.5" /><circle cx="17.8" cy="6.1" r="2.2" fill="#fff" stroke="currentColor" stroke-width="1.5" /><circle cx="12" cy="12" r="2.3" fill="#E0F2FE" stroke="#0EA5E9" stroke-width="1.5" /><circle cx="6.2" cy="17.8" r="2.2" fill="#fff" stroke="currentColor" stroke-width="1.5" /><circle cx="17.8" cy="17.8" r="2.2" fill="#fff" stroke="currentColor" stroke-width="1.5" /></svg>
+              </span>
+              <span class="course-card__hours"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.7" stroke="currentColor" stroke-width="1.3" /><path d="M8 4.7V8l2.2 1.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>30 hours</span>
+            </div>
+            <div class="course-card__body">
+              <span class="course-card__eyebrow">Turn ideas into models</span>
+              <h3>Machine Learning with AI</h3>
+              <p>Build useful models from real data.</p>
+            </div>
+            <span class="course-card__link">View course <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+          </a>
+
+          <a class="course-card course-card--tools" href="https://learn.mindlyftai.com/prompt_engineering_course/" target="_blank" rel="noopener noreferrer" aria-label="View course: AI Tools, Prompt Engineering and Automation for Everyone, 30 hours">
+            <div class="course-card__head">
+              <span class="course-card__icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.8 5.2L19 10l-5.2 1.8L12 17l-1.8-5.2L5 10l5.2-1.8L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round" /><path d="m19 15 .9 2.1L22 18l-2.1.9L19 21l-.9-2.1L16 18l2.1-.9L19 15Zm-13-3 .8 1.8 1.7.7-1.7.7L6 17l-.8-1.8-1.7-.7 1.7-.7L6 12Z" fill="#BAE6FD" stroke="#0EA5E9" stroke-width="1.1" stroke-linejoin="round" /></svg>
+              </span>
+              <span class="course-card__hours"><svg viewBox="0 0 16 16" fill="none"><circle cx="8" cy="8" r="5.7" stroke="currentColor" stroke-width="1.3" /><path d="M8 4.7V8l2.2 1.4" stroke="currentColor" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round" /></svg>30 hours</span>
+            </div>
+            <div class="course-card__body">
+              <span class="course-card__eyebrow">Make more room for good work</span>
+              <h3>AI Tools, Prompt Engineering &amp; Automation for Everyone</h3>
+              <p>Use AI tools to simplify everyday work.</p>
+            </div>
+            <span class="course-card__link">View course <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></span>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="path-section" id="path" aria-labelledby="path-title">
+      <div class="page-container">
+        <div class="section-heading">
+          <span class="section-kicker">A clear path, with support</span>
+          <h2 id="path-title">From first lesson to first interview</h2>
+          <p>Build momentum through a practical learning path, with guidance at every stage.</p>
+        </div>
+
+        <div class="timeline" aria-label="Four steps to placement support">
+          <article class="timeline-step">
+            <span class="timeline-step__marker" aria-hidden="true">01</span>
+            <h3>Learn</h3>
+            <p>Get comfortable with the skills your track needs.</p>
+          </article>
+          <article class="timeline-step">
+            <span class="timeline-step__marker" aria-hidden="true">02</span>
+            <h3>Build</h3>
+            <p>Turn ideas into projects you can talk about.</p>
+          </article>
+          <article class="timeline-step">
+            <span class="timeline-step__marker" aria-hidden="true">03</span>
+            <h3>Prepare</h3>
+            <p>Practice your story, skills and interview approach.</p>
+          </article>
+          <article class="timeline-step">
+            <span class="timeline-step__marker" aria-hidden="true">04</span>
+            <h3>Get placed</h3>
+            <p>Get guided toward your first interview and next role.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="reviews-section section--wash" id="reviews" aria-labelledby="reviews-title">
+      <div class="page-container">
+        <div class="section-heading">
+          <span class="section-kicker">Learner stories</span>
+          <h2 id="reviews-title">Good work starts with a first step</h2>
+          <p>Thoughtful guidance and hands-on learning can make the next move feel clearer.</p>
+        </div>
+
+        <div class="review-grid">
+          <article class="review-card">
+            <div class="review-rating" role="img" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <blockquote>“The projects helped me connect the dots between data and the questions a business actually asks.”</blockquote>
+            <div class="review-person">
+              <span class="review-avatar" aria-hidden="true">AR</span>
+              <span><span class="review-person__name">Ananya R.</span><span class="review-person__role">Data analytics student</span></span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-rating" role="img" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <blockquote>“I could put the lessons to work straight away. Interview preparation made my next step feel much clearer.”</blockquote>
+            <div class="review-person">
+              <span class="review-avatar" aria-hidden="true">RP</span>
+              <span><span class="review-person__name">Rohan P.</span><span class="review-person__role">Working professional</span></span>
+            </div>
+          </article>
+
+          <article class="review-card">
+            <div class="review-rating" role="img" aria-label="5 out of 5 stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
+            <blockquote>“I use AI tools more thoughtfully now, and I know how to write prompts that get more useful results.”</blockquote>
+            <div class="review-person">
+              <span class="review-avatar" aria-hidden="true">SK</span>
+              <span><span class="review-person__name">Sneha K.</span><span class="review-person__role">AI tools learner</span></span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="cta-title">
+      <div class="page-container">
+        <div class="cta-banner">
+          <div class="cta-banner__copy">
+            <span class="cta-banner__kicker"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="m8 1.8 1.5 4.1 4.2 1.5-4.2 1.5L8 13l-1.5-4.1-4.2-1.5 4.2-1.5L8 1.8Z" stroke="currentColor" stroke-width="1.2" stroke-linejoin="round" /></svg>Your next chapter can start here</span>
+            <h2 id="cta-title">Ready to start your AI career?</h2>
+            <p>Choose a track, build practical skills and take the next step with a little more confidence.</p>
+          </div>
+          <div class="cta-banner__action">
+            <a class="button button--primary" href="#courses">Choose your course <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 10h11m-4.5-4.5L15 10l-4.5 4.5" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" /></svg></a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer" id="contact">
+    <div class="footer-container">
+      <div class="footer-main">
+        <section class="footer-brand" aria-label="MindLyft AI">
+          <a class="brand" href="#top" aria-label="MindLyft AI home">
+            <svg class="brand-mark" viewBox="0 0 44 44" fill="none" aria-hidden="true">
+              <rect x="1" y="1" width="42" height="42" rx="14" fill="#F0F9FF" stroke="#BAE6FD" />
+              <path d="M21.7 12.6a5.4 5.4 0 0 0-9.2 3.9c0 .7.1 1.3.4 1.9a4.5 4.5 0 0 0 .4 8.3 5.3 5.3 0 0 0 8.4 3.9V12.6Z" stroke="#0369A1" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M22.3 12.6a5.4 5.4 0 0 1 9.2 3.9c0 .7-.1 1.3-.4 1.9a4.5 4.5 0 0 1-.4 8.3 5.3 5.3 0 0 1-8.4 3.9V12.6Z" stroke="#0EA5E9" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" />
+              <path d="M22 10.8v23M14.2 17.9h4.1m-4.3 6.7h4.7m7.1-6.7h4.1m-4.5 6.7h4.7" stroke="#38BDF8" stroke-width="1.5" stroke-linecap="round" />
+              <circle cx="18.3" cy="17.9" r="1.2" fill="#0369A1" /><circle cx="25.7" cy="24.6" r="1.2" fill="#0369A1" />
+            </svg>
+            <span>MindLyft <span class="brand__ai">AI</span></span>
+          </a>
+          <p class="footer-brand__description">Empowering careers through AI-powered education and cutting-edge technology solutions.</p>
+          <div class="footer-socials" aria-label="Social media links">
+            <a class="footer-social-link" href="https://www.facebook.com/mindlyftaiofficial?rdid=1HGIfPNcBlwnTk6i&amp;share_url=https%3A%2F%2Fwww.facebook.com%2Fshare%2F1E32JpTGkt%2F#" target="_blank" rel="noopener noreferrer" aria-label="MindLyft AI on Facebook">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M11.6 17.2v-6h2.1l.3-2.4h-2.4V7.3c0-.7.2-1.2 1.2-1.2h1.3V4a16 16 0 0 0-1.9-.1c-1.9 0-3.2 1.1-3.2 3.2v1.7H7v2.4h2v6h2.6Z" fill="currentColor" /></svg>
+            </a>
+            <a class="footer-social-link" href="https://x.com/MindlyftAI" target="_blank" rel="noopener noreferrer" aria-label="MindLyft AI on X">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M3.2 3h4.1l3.5 4.7L14.9 3h1.8l-5.1 5.9L17.4 17h-4.1l-3.8-5.1L5 17H3.1l5.5-6.4L3.2 3Zm2.9 1.5h-.8l7.9 11h.8l-7.9-11Z" fill="currentColor" /></svg>
+            </a>
+            <a class="footer-social-link" href="https://www.instagram.com/mindlyft_ai_official" target="_blank" rel="noopener noreferrer" aria-label="MindLyft AI on Instagram">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="3" y="3" width="14" height="14" rx="4" stroke="currentColor" stroke-width="1.7" /><circle cx="10" cy="10" r="3.2" stroke="currentColor" stroke-width="1.7" /><circle cx="14.5" cy="5.6" r="1" fill="currentColor" /></svg>
+            </a>
+            <a class="footer-social-link" href="https://linkedin.com/company/mindlyftai/" target="_blank" rel="noopener noreferrer" aria-label="MindLyft AI on LinkedIn">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M4 7.3h2.7v8.6H4V7.3Zm1.4-4a1.6 1.6 0 1 1 0 3.2 1.6 1.6 0 0 1 0-3.2Zm3.1 4h2.6v1.2c.4-.7 1.2-1.5 2.7-1.5 2.8 0 3.3 1.8 3.3 4.1v4.8h-2.7v-4.3c0-1 0-2.3-1.5-2.3s-1.7 1.1-1.7 2.2v4.4H8.5V7.3Z" fill="currentColor" /></svg>
+            </a>
+          </div>
+        </section>
+
+        <nav class="footer-column" aria-labelledby="footer-quick-links">
+          <h2 id="footer-quick-links">Quick links</h2>
+          <ul class="footer-link-list">
+            <li><a class="footer-link" href="#top">About</a></li>
+            <li><a class="footer-link" href="#courses">Courses</a></li>
+            <li><span>Blog</span></li>
+            <li><a class="footer-link" href="mailto:info@mindlyftai.com?subject=MindLyft%20AI%20newsletter">News Letter</a></li>
+            <li><a class="footer-link" href="mailto:info@mindlyftai.com">Contact</a></li>
+            <li><a class="footer-link" href="https://learn.mindlyftai.com/" target="_blank" rel="noopener noreferrer">Login</a></li>
+          </ul>
+        </nav>
+
+        <section class="footer-column" aria-labelledby="footer-contact-title">
+          <h2 id="footer-contact-title">Contact</h2>
+          <ul class="footer-contact-list">
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M16 8.2c0 4.1-6 9.3-6 9.3S4 12.3 4 8.2a6 6 0 1 1 12 0Z" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" /><circle cx="10" cy="8" r="2" stroke="currentColor" stroke-width="1.5" /></svg>
+              <address>2nd Floor, ABC Tiara, opposite Akurdi Railway Station Road, Pradhikaran, Nigdi, Pimpri-Chinchwad, Maharashtra 411035</address>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><rect x="2.7" y="4.2" width="14.6" height="11.6" rx="1.8" stroke="currentColor" stroke-width="1.6" /><path d="m3.6 5.4 6.4 5.1 6.4-5.1" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <a href="mailto:info@mindlyftai.com">info@mindlyftai.com</a>
+            </li>
+            <li class="footer-contact-item">
+              <svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><path d="M6.2 2.8h2.2l1.1 3.3-1.4 1.4a12.1 12.1 0 0 0 4.4 4.4l1.4-1.4 3.3 1.1v2.2a2 2 0 0 1-2 2A12.5 12.5 0 0 1 4.2 4.8a2 2 0 0 1 2-2Z" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" /></svg>
+              <a href="tel:+919975670303">+91 9975670303</a>
+            </li>
+          </ul>
+        </section>
+
+        <nav class="footer-column" aria-labelledby="footer-terms-title">
+          <h2 id="footer-terms-title">Terms &amp; conditions</h2>
+          <ul class="footer-link-list">
+            <li><span>Terms of Service</span></li>
+            <li><span>Privacy Policy</span></li>
+            <li><span>Refund Policy</span></li>
+            <li><span>Intellectual Property</span></li>
+            <li><a class="footer-link" href="mailto:info@mindlyftai.com?subject=Legal%20contact">Legal Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-container footer-bottom__inner">
+        <p>© 2026 MindLyft AI. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    (() => {
+      const tracks = [
+        {
+          command: "mindlyft start --track data-analyst",
+          title: "Fundamentals of Data Analytics",
+          hours: "30 hours"
+        },
+        {
+          command: "mindlyft start --track machine-learning",
+          title: "Machine Learning with AI",
+          hours: "30 hours"
+        },
+        {
+          command: "mindlyft start --track ai-tools",
+          title: "AI Tools, Prompt Engineering & Automation for Everyone",
+          hours: "30 hours"
+        }
+      ];
+
+      const command = document.getElementById("typed-command");
+      const course = document.getElementById("terminal-course");
+      const hours = document.getElementById("terminal-hours");
+      const state = document.getElementById("terminal-state");
+      const output = document.getElementById("terminal-output");
+      const progress = document.getElementById("terminal-progress");
+      const announcement = document.getElementById("terminal-announcement");
+      const reducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)");
+      let runToken = 0;
+
+      const pause = (duration) => new Promise((resolve) => window.setTimeout(resolve, duration));
+
+      function setTrack(track, isPending = false) {
+        course.textContent = track.title;
+        hours.textContent = track.hours;
+        state.textContent = isPending ? "Loading your track" : "Track selected";
+        output.classList.toggle("is-pending", isPending);
+      }
+
+      function setStaticPreview() {
+        runToken += 1;
+        const track = tracks[0];
+        command.textContent = track.command;
+        setTrack(track);
+        progress.classList.remove("is-empty");
+        announcement.textContent = `Terminal preview: ${track.title}, ${track.hours}.`;
+      }
+
+      async function animateTracks() {
+        const token = ++runToken;
+        let trackIndex = 0;
+
+        while (token === runToken && !reducedMotion.matches) {
+          const track = tracks[trackIndex];
+          command.textContent = "";
+          setTrack({ title: "Preparing your next step…", hours: "30 hours" }, true);
+          progress.classList.add("is-empty");
+
+          for (let index = 0; index <= track.command.length; index += 1) {
+            if (token !== runToken || reducedMotion.matches) return;
+            command.textContent = track.command.slice(0, index);
+            progress.style.transform = `scaleX(${Math.max(0.04, index / track.command.length)})`;
+            await pause(36);
+          }
+
+          if (token !== runToken || reducedMotion.matches) return;
+          setTrack(track);
+          progress.classList.remove("is-empty");
+          progress.style.transform = "scaleX(1)";
+          announcement.textContent = `Terminal preview: ${track.title}, ${track.hours}.`;
+          await pause(2300);
+
+          if (token !== runToken || reducedMotion.matches) return;
+          for (let index = track.command.length; index >= 0; index -= 1) {
+            if (token !== runToken || reducedMotion.matches) return;
+            command.textContent = track.command.slice(0, index);
+            progress.style.transform = `scaleX(${Math.max(0.04, index / track.command.length)})`;
+            await pause(16);
+          }
+
+          trackIndex = (trackIndex + 1) % tracks.length;
+          await pause(250);
+        }
+      }
+
+      if (reducedMotion.matches) {
+        setStaticPreview();
+      } else {
+        animateTracks();
+      }
+
+      reducedMotion.addEventListener("change", (event) => {
+        if (event.matches) {
+          setStaticPreview();
+        } else {
+          animateTracks();
+        }
+      });
+    })();
+  </script>
+</body>
+</html>
