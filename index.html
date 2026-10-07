@@ -12,6 +12,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="chatbot/widget.css">
   <script src="https://cdn.tailwindcss.com" defer></script>
 
   <style>
@@ -3265,5 +3266,18 @@
     })();
   </script>
 
+  <!-- MindLyft AI Agent chat widget -->
+  <script>
+    window.MindlyftChatConfig = {
+      apiBase: '/api', /* ← put your Worker URL here, e.g. 'https://mindlyft-agent.<you>.workers.dev/api' */
+      logo: 'mindlyftai_logo.avif',
+      privacyPolicyUrl: '#',
+      earlyBirdEndDate: '', /* [EARLY_BIRD_END_DATE] — leave '' for "Special offer", no deadlines */
+      seatsLeft: '',        /* [SEATS_LEFT] — leave '' to never mention scarcity */
+      phone: '+91 9975670303',
+      email: 'info@mindlyftai.com'
+    };
+  </script>
+  <script src="chatbot/widget.js" defer></script>
 </body>
 </html>

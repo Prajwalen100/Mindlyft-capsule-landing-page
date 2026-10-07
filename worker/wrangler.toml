@@ -1,0 +1,12 @@
+name = "mindlyft-agent"
+main = "worker.js"
+compatibility_date = "2026-10-01"
+
+# Non-secret config (optional). Secrets go in .dev.vars / `wrangler secret put`:
+#   DEEPSEEK_API_KEY   (required)
+#   FACTS_JSON         (optional — owner-confirmed facts, see CHATBOT-SETUP.md)
+#
+# [vars]
+# DEEPSEEK_MODEL = "deepseek-v4-flash"
+# FORMSPREE_URL = "https://formspree.io/f/mnpjpvzb"
+# ALLOWED_ORIGIN = "https://your-site.example"
