@@ -1,0 +1,1 @@
+# Mindlyft-capsule-landing-page
