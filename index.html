@@ -257,29 +257,29 @@
       animation: floatOrb 12s ease-in-out infinite;
     }
     .hero__orb--1 {
-      width: 560px; height: 560px;
-      left: -160px; top: -120px;
-      background: radial-gradient(circle at 30% 30%, rgba(56,189,248,0.9), rgba(14,165,233,0.45) 45%, transparent 68%);
+      width: 600px; height: 600px;
+      left: -170px; top: -130px;
+      background: radial-gradient(circle at 30% 30%, rgba(56,189,248,0.95), rgba(14,165,233,0.55) 42%, rgba(96,165,250,0.32) 58%, transparent 70%);
       animation-duration: 14s;
     }
     .hero__orb--2 {
-      width: 520px; height: 520px;
-      right: -140px; top: -40px;
-      background: radial-gradient(circle at 30% 30%, rgba(124,58,237,0.85), rgba(217,70,239,0.42) 45%, transparent 70%);
+      width: 540px; height: 540px;
+      right: -150px; top: -50px;
+      background: radial-gradient(circle at 32% 30%, rgba(96,165,250,0.9), rgba(56,189,248,0.58) 35%, rgba(129,140,248,0.42) 55%, transparent 72%);
       animation-delay: -2s;
     }
     .hero__orb--3 {
-      width: 460px; height: 460px;
-      right: 18%; bottom: -140px;
-      background: radial-gradient(circle at 30% 30%, rgba(16,185,129,0.55), rgba(56,189,248,0.35) 50%, transparent 70%);
+      width: 480px; height: 480px;
+      right: 16%; bottom: -150px;
+      background: radial-gradient(circle at 30% 30%, rgba(56,189,248,0.65), rgba(14,165,233,0.42) 45%, rgba(167,139,250,0.28) 62%, transparent 72%);
       animation-delay: -5s;
       animation-duration: 16s;
     }
     .hero__orb--4 {
-      width: 380px; height: 380px;
-      left: 34%; top: 38%;
-      background: radial-gradient(circle at 30% 30%, rgba(245,158,11,0.42), rgba(236,72,153,0.28) 55%, transparent 72%);
-      opacity: 0.45;
+      width: 360px; height: 360px;
+      left: 36%; top: 36%;
+      background: radial-gradient(circle at 30% 30%, rgba(125,211,252,0.55), rgba(56,189,248,0.38) 48%, rgba(129,140,248,0.22) 66%, transparent 74%);
+      opacity: 0.5;
       animation-delay: -7s;
     }
     @keyframes floatOrb {
@@ -306,7 +306,7 @@
       display: inline-flex;
       align-items: center;
       gap: 9px;
-      margin: 0 0 20px;
+      margin: 0 0 14px;
       padding: 7px 12px 7px 10px;
       border: 1px solid rgba(186, 230, 253, 0.9);
       border-radius: 999px;
@@ -343,6 +343,67 @@
     @keyframes ping {
       75%,100% { transform: scale(1.7); opacity:0; }
     }
+
+    /* Sky-blue founding pill — screenshot style */
+    .hero-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      padding: 5px 5px 5px 6px;
+      margin: 0 0 16px;
+      border: 1px solid #e8eaf0;
+      border-radius: 999px;
+      background: rgba(255,255,255,0.92);
+      backdrop-filter: blur(8px);
+      box-shadow: 0 2px 12px rgba(15,23,42,0.06), 0 1px 3px rgba(15,23,42,0.03);
+      font-family: var(--body);
+      font-size: 13.5px;
+      font-weight: 500;
+      color: #475569;
+      letter-spacing: -0.01em;
+      animation: fadeInUp 700ms cubic-bezier(.2,.8,.2,1) both;
+    }
+    .hero-pill__badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 13px;
+      border-radius: 999px;
+      background: #2563eb;
+      background: linear-gradient(135deg, #2563eb 0%, #3b82f6 100%);
+      color: #fff;
+      font-family: var(--body);
+      font-size: 11.5px;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      line-height: 1;
+      box-shadow: 0 2px 8px rgba(37,99,235,0.28);
+    }
+    .hero-pill__badge::before {
+      content: "";
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #0f172a;
+      border: 2px solid rgba(255,255,255,0.9);
+      box-shadow: 0 0 0 2px rgba(255,255,255,0.25);
+      flex: 0 0 auto;
+    }
+    .hero-pill__arrow {
+      display: grid;
+      place-items: center;
+      width: 28px;
+      height: 28px;
+      flex: 0 0 auto;
+      border-radius: 50%;
+      background: #f1f5f9;
+      border: 1px solid #e2e8f0;
+      color: #64748b;
+      transition: transform 180ms ease, background 180ms ease, color 180ms ease;
+    }
+    .hero-pill__arrow svg { width:14px; height:14px; }
+    .hero-pill:hover .hero-pill__arrow { background:#fff; color:#2563eb; transform: translateX(2px); border-color:#bfdbfe; }
 
     h1,
     h2,
@@ -397,17 +458,33 @@
       z-index:-1;
     }
     .hero__readiness {
-      background: linear-gradient(135deg, #0ea5e9 10%, #6366f1 48%, #7c3aed 78%, #ec4899 100%);
+      background: linear-gradient(90deg, #1d4ed8 0%, #2563eb 12%, #0ea5e9 28%, #38bdf8 42%, #60a5fa 54%, #818cf8 66%, #7c3aed 82%, #a855f7 100%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
-      background-size: 200% 100%;
-      animation: gradientShift 6s ease infinite;
-      font-weight: 700;
+      background-size: 220% 100%;
+      animation: gradientShift 5s ease infinite;
+      font-weight: 800;
+      position: relative;
     }
     @keyframes gradientShift {
       0%,100% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
+    }
+    .hero__cursor {
+      display: inline-block;
+      width: 3px;
+      height: 0.95em;
+      margin-left: 3px;
+      background: linear-gradient(180deg, #38bdf8, #818cf8);
+      border-radius: 2px;
+      vertical-align: -0.06em;
+      animation: heroCursorBlink 1s step-end infinite;
+      box-shadow: 0 0 8px rgba(56,189,248,0.5);
+    }
+    @keyframes heroCursorBlink {
+      0%, 50% { opacity: 1; }
+      51%, 100% { opacity: 0; }
     }
 
     .hero__description {
@@ -2443,6 +2520,16 @@
         font-size: 13px;
       }
 
+      .hero-pill {
+        font-size: 11.5px;
+        gap: 7px;
+        padding: 4px 4px 4px 5px;
+        flex-wrap: wrap;
+        max-width: 100%;
+      }
+      .hero-pill__badge { font-size: 10px; padding: 6px 10px; gap:5px; }
+      .hero-pill__badge::before { width:6px; height:6px; }
+      .hero-pill__arrow { width:24px; height:24px; }
       .hero__trust {
         gap: 14px;
         align-items: flex-start;
@@ -2724,8 +2811,13 @@
       </div>
       <div class="page-container hero__grid grid items-center lg:grid-cols-2">
         <div class="hero__copy">
+          <a class="hero-pill" href="#courses" aria-label="September 2026 Founding Batch Limited Seats">
+            <span class="hero-pill__badge">September 2026</span>
+            <span>Founding Batch • Limited Seats</span>
+            <span class="hero-pill__arrow" aria-hidden="true"><svg viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M6 8h6M9 5.5 11.5 8 9 10.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+          </a>
           <p class="eyebrow"><span class="eyebrow__dot" aria-hidden="true"></span> AI training in Pune, India · Admissions open</p>
-          <h1 id="hero-title"><span class="hero__title-line">Career Accelerator</span><span class="hero__title-line"><span class="hero__amp">&amp;</span> <span class="hero__readiness">Placement Readiness</span></span></h1>
+          <h1 id="hero-title"><span class="hero__title-line">Career Accelerator</span><span class="hero__title-line"><span class="hero__amp">&amp;</span> <span class="hero__readiness"><span id="hero-typed">Placement Readiness</span><span class="hero__cursor" aria-hidden="true"></span></span></span></h1>
           <p class="hero__description">Pick the AI track that fits your goals, learn by building real projects, and get guided step by step toward your first interview — with mentors who actually hire.</p>
           <div class="hero__actions flex flex-wrap items-center">
             <a class="button button--primary" href="#courses">
@@ -3442,6 +3534,44 @@
           }
         });
       });
+
+      /* Hero typing — sky-blue gradient + cursor, screenshot style */
+      const heroTyped = document.getElementById('hero-typed');
+      if (heroTyped) {
+        if (reducedMotion.matches) {
+          heroTyped.textContent = 'Placement Readiness';
+        } else {
+          const heroPhrases = ['Placement Readiness', 'Ship Real AI Systems.'];
+          let hPhrase = 0;
+          let hChar = heroTyped.textContent.length;
+          let hDeleting = false;
+          const hType = 78, hDelete = 38, hPauseType = 1700, hPauseDelete = 420;
+          let hWait = 2400;
+          const tickHero = () => {
+            const phrase = heroPhrases[hPhrase];
+            if (!hDeleting) {
+              if (hChar < phrase.length) {
+                hChar++;
+                heroTyped.textContent = phrase.slice(0, hChar);
+                setTimeout(tickHero, hType + Math.random()*22);
+              } else {
+                setTimeout(() => { hDeleting = true; tickHero(); }, hPauseType);
+              }
+            } else {
+              if (hChar > 0) {
+                hChar--;
+                heroTyped.textContent = phrase.slice(0, hChar);
+                setTimeout(tickHero, hDelete);
+              } else {
+                hDeleting = false;
+                hPhrase = (hPhrase + 1) % heroPhrases.length;
+                setTimeout(tickHero, hPauseDelete);
+              }
+            }
+          };
+          setTimeout(() => { hDeleting = true; tickHero(); }, hWait);
+        }
+      }
     })();
   </script>
 </body>
