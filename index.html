@@ -433,44 +433,24 @@
       letter-spacing: -0.01em;
     }
 
-    /* Trust bar — replaces hero__note */
+    /* Trust bar — screenshot style: A B C D • ★★★★★ 4.9/5 • Live cohorts • Certificates */
     .hero__trust {
       display: flex;
       align-items: center;
-      gap: 16px;
+      gap: 18px;
       margin-top: 28px;
-      padding: 12px 14px 12px 12px;
-      border: 1px solid rgba(186,230,253,0.9);
-      border-radius: 16px;
-      background: rgba(255,255,255,0.88);
-      backdrop-filter: blur(10px) saturate(1.15);
-      -webkit-backdrop-filter: blur(10px) saturate(1.15);
-      box-shadow: 0 8px 24px rgba(15,53,81,0.07), 0 1px 4px rgba(15,53,81,0.05);
-      max-width: 520px;
+      padding: 0;
+      border: none;
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+      -webkit-backdrop-filter: none;
+      box-shadow: none;
+      max-width: none;
       animation: fadeInUp 700ms cubic-bezier(.2,.8,.2,1) 260ms both;
       position: relative;
-      overflow: hidden;
-    }
-    .hero__trust::before {
-      content:"";
-      position:absolute;
-      top:0; left:0; right:0;
-      height: 1px;
-      background: linear-gradient(90deg, transparent, rgba(56,189,248,0.5), rgba(124,58,237,0.4), transparent);
-      opacity: 0.8;
-    }
-    .hero__trust::after {
-      content:"";
-      position:absolute;
-      inset:0;
-      background: linear-gradient(100deg, transparent 40%, rgba(255,255,255,0.6) 50%, transparent 60%);
-      transform: translateX(-100%);
-      animation: shimmer 3.6s ease-in-out 1.2s infinite;
-      pointer-events:none;
-    }
-    @keyframes shimmer {
-      0% { transform: translateX(-100%); }
-      50%,100% { transform: translateX(100%); }
+      overflow: visible;
+      flex-wrap: wrap;
     }
 
     .hero__avatars {
@@ -479,36 +459,84 @@
       flex: 0 0 auto;
     }
     .hero__avatar {
-      width: 32px; height: 32px;
+      width: 42px; height: 42px;
       border-radius: 50%;
       border: 2.5px solid #fff;
       display:grid;
       place-items:center;
-      font-size: 10px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
       letter-spacing: -0.02em;
       color: #fff;
-      margin-left: -8px;
-      box-shadow: 0 2px 8px rgba(15,53,81,0.12);
+      margin-left: -10px;
+      box-shadow: 0 1px 4px rgba(15,53,81,0.14);
       position: relative;
       overflow:hidden;
+      font-family: var(--body);
     }
     .hero__avatar:first-child { margin-left:0; }
-    .hero__avatar--1 { background: linear-gradient(135deg, #0ea5e9, #06b6d4); z-index:4; }
-    .hero__avatar--2 { background: linear-gradient(135deg, #7c3aed, #6366f1); z-index:3; }
-    .hero__avatar--3 { background: linear-gradient(135deg, #ec4899, #f59e0b); z-index:2; }
-    .hero__avatar--4 {
-      background: #f0f9ff;
-      color: #0369a1;
-      border-color: #fff;
-      font-size: 9px;
-      z-index:1;
-      border-style: solid;
-    }
-    .hero__avatar img {
-      width:100%; height:100%; object-fit:cover;
-    }
+    .hero__avatar--a { background: #1e40af; background: linear-gradient(135deg, #1d4ed8, #2563eb); z-index:4; }
+    .hero__avatar--b { background: linear-gradient(135deg, #4338ca, #4f46e5); z-index:3; }
+    .hero__avatar--c { background: linear-gradient(135deg, #6d28d9, #7c3aed); z-index:2; }
+    .hero__avatar--d { background: linear-gradient(135deg, #9333ea, #a855f7); z-index:1; }
+    /* legacy aliases for floating stats */
+    .hero__avatar--1 { background: linear-gradient(135deg, #1d4ed8, #2563eb); z-index:4; }
+    .hero__avatar--2 { background: linear-gradient(135deg, #4338ca, #4f46e5); z-index:3; }
+    .hero__avatar--3 { background: linear-gradient(135deg, #6d28d9, #7c3aed); z-index:2; }
+    .hero__avatar--4 { background: #f0f9ff; color:#0369a1; border-color:#fff; font-size: 9px; z-index:1; }
 
+    .hero__trust-rating {
+      display:flex;
+      flex-direction: column;
+      gap: 2px;
+      min-width:0;
+      flex: 0 0 auto;
+      line-height:1;
+    }
+    .hero__trust-stars {
+      display:flex;
+      align-items:center;
+      gap: 8px;
+      line-height:1;
+    }
+    .hero__trust-stars-icons,
+    .hero__stars-icons {
+      display:flex;
+      gap:2px;
+      color: #f59e0b;
+      font-size: 15px;
+      letter-spacing: 0.06em;
+      line-height:1;
+    }
+    .hero__trust-stars-icons span { animation: starPop 600ms cubic-bezier(.34,1.56,.64,1) both; }
+    .hero__trust-stars-icons span:nth-child(1){animation-delay: 600ms}
+    .hero__trust-stars-icons span:nth-child(2){animation-delay: 650ms}
+    .hero__trust-stars-icons span:nth-child(3){animation-delay: 700ms}
+    .hero__trust-stars-icons span:nth-child(4){animation-delay: 750ms}
+    .hero__trust-stars-icons span:nth-child(5){animation-delay: 800ms}
+    @keyframes starPop {
+      0% { transform: scale(0) rotate(-20deg); opacity:0; }
+      100% { transform: scale(1) rotate(0); opacity:1; }
+    }
+    .hero__trust-score {
+      font-family: var(--body);
+      font-weight: 700;
+      font-size: 15px;
+      color: #0f172a;
+      letter-spacing:-0.02em;
+      line-height:1;
+    }
+    .hero__trust-sub {
+      font-size: 13.5px;
+      color: #94a3b8;
+      color: #8a9bb0;
+      line-height:1.2;
+      font-weight: 500;
+      letter-spacing: -0.01em;
+      white-space: nowrap;
+    }
+    .hero__trust-sub span { color:#64748b; font-weight:600; }
+    /* legacy */
     .hero__trust-main {
       display:flex;
       flex-direction: column;
@@ -522,24 +550,12 @@
       gap: 6px;
       line-height:1;
     }
-    .hero__stars-icons {
-      display:flex;
-      gap:1px;
-      color: #f59e0b;
-      font-size: 13px;
-      letter-spacing: 0.02em;
-      text-shadow: 0 1px 0 rgba(245,158,11,0.2);
-    }
     .hero__stars-icons span { animation: starPop 600ms cubic-bezier(.34,1.56,.64,1) both; }
     .hero__stars-icons span:nth-child(1){animation-delay: 600ms}
     .hero__stars-icons span:nth-child(2){animation-delay: 650ms}
     .hero__stars-icons span:nth-child(3){animation-delay: 700ms}
     .hero__stars-icons span:nth-child(4){animation-delay: 750ms}
     .hero__stars-icons span:nth-child(5){animation-delay: 800ms}
-    @keyframes starPop {
-      0% { transform: scale(0) rotate(-20deg); opacity:0; }
-      100% { transform: scale(1) rotate(0); opacity:1; }
-    }
     .hero__rating {
       display:inline-flex;
       align-items:center;
@@ -570,46 +586,36 @@
 
     .hero__trust-divider {
       width: 1px;
-      align-self: stretch;
-      background: linear-gradient(180deg, transparent, #dbeafe 25%, #bae6fd 50%, #dbeafe 75%, transparent);
+      height: 38px;
+      align-self: center;
+      background: #e2e8f0;
       flex: 0 0 auto;
-      margin-inline: 2px;
+      margin-inline: 6px 2px;
     }
-    .hero__hours-mini {
-      display:flex;
-      flex-direction:column;
-      align-items:flex-start;
-      gap:1px;
-      flex: 0 0 auto;
-      min-width: 0;
-    }
-    .hero__hours-mini strong {
-      font-family: var(--display);
-      font-size: 13px;
-      font-weight: 800;
-      color: #0f3551;
-      letter-spacing:-0.03em;
-      display:flex;
+    .hero__trust-meta {
+      display:inline-flex;
       align-items:center;
-      gap:6px;
+      gap: 10px;
+      flex: 0 0 auto;
+      color: #64748b;
+      color: #7a8aa0;
+      font-size: 14px;
+      font-weight: 500;
+      letter-spacing: -0.01em;
       white-space: nowrap;
     }
-    .hero__hours-mini strong i {
+    .hero__trust-meta-icon {
       display:grid;
       place-items:center;
-      width:22px; height:22px;
-      border-radius: 7px;
-      background: linear-gradient(135deg, #e0f2fe, #f0f9ff);
-      border: 1px solid #bae6fd;
-      color: #0ea5e9;
-      font-style:normal;
-      font-size: 11px;
+      width: 22px;
+      height: 22px;
+      color: #94a3b8;
+      flex: 0 0 auto;
     }
-    .hero__hours-mini span {
-      font-size: 11px;
-      color: #6b8293;
-      line-height:1.2;
-      white-space: nowrap;
+    .hero__trust-meta-icon svg { width:22px; height:22px; }
+    /* legacy hours mini - keep for compatibility but hidden in new layout */
+    .hero__hours-mini {
+      display:none;
     }
 
     @keyframes fadeInUp {
@@ -2087,15 +2093,25 @@
       }
 
       .hero__trust {
+        gap: 14px;
+        align-items: flex-start;
         flex-wrap: wrap;
-        gap: 12px;
-        padding: 12px;
-        border-radius: 14px;
       }
+      .hero__avatar { width:34px; height:34px; font-size:13px; margin-left:-7px; }
+      .hero__trust-stars-icons { font-size:13px; }
+      .hero__trust-score { font-size:13px; }
+      .hero__trust-sub { font-size:12.5px; }
       .hero__trust-divider { display:none; }
-      .hero__trust-main { min-width: 120px; }
-      .hero__hours-mini { flex-direction: row; align-items:center; gap:10px; width: 100%; padding-top: 10px; border-top: 1px dashed #e0e7ff; }
-      .hero__hours-mini span { white-space: normal; }
+      .hero__trust-meta {
+        width:100%;
+        padding-top:12px;
+        margin-top:2px;
+        border-top:1px solid #eef2f7;
+        font-size:13px;
+        gap:8px;
+      }
+      .hero__trust-meta-icon { width:20px; height:20px; }
+      .hero__trust-meta-icon svg { width:20px; height:20px; }
 
       .terminal-card {
         border-radius: 18px;
@@ -2352,25 +2368,27 @@
             <a class="button button--outline" href="#path">See how it works</a>
           </div>
 
-          <!-- Trusted by 5000+ · 4.9 rating — as per screenshot -->
-          <div class="hero__trust" aria-label="Social proof">
+          <!-- Screenshot exact: A B C D • ★★★★★ 4.9/5 • Trusted by 1000+ • | • Live cohorts • Certificates -->
+          <div class="hero__trust" aria-label="Social proof: rated 4.9 out of 5, trusted by 1000 plus students, live cohorts and certificates">
             <div class="hero__avatars" aria-hidden="true">
-              <span class="hero__avatar hero__avatar--1">AS</span>
-              <span class="hero__avatar hero__avatar--2">RP</span>
-              <span class="hero__avatar hero__avatar--3">SK</span>
-              <span class="hero__avatar hero__avatar--4">+5k</span>
+              <span class="hero__avatar hero__avatar--a">A</span>
+              <span class="hero__avatar hero__avatar--b">B</span>
+              <span class="hero__avatar hero__avatar--c">C</span>
+              <span class="hero__avatar hero__avatar--d">D</span>
             </div>
-            <div class="hero__trust-main">
-              <div class="hero__stars">
-                <span class="hero__stars-icons" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
-                <span class="hero__rating">4.9 <small>/5</small></span>
+            <div class="hero__trust-rating">
+              <div class="hero__trust-stars">
+                <span class="hero__trust-stars-icons" aria-hidden="true"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></span>
+                <span class="hero__trust-score">4.9/5</span>
               </div>
-              <p class="hero__trust-text">Trusted by <strong>5000+</strong> students</p>
+              <span class="hero__trust-sub">Trusted by 1000+ students</span>
             </div>
             <span class="hero__trust-divider" aria-hidden="true"></span>
-            <div class="hero__hours-mini">
-              <strong><i>◷</i> 30 focused hours</strong>
-              <span>Practical skills · clear next step</span>
+            <div class="hero__trust-meta">
+              <span class="hero__trust-meta-icon" aria-hidden="true">
+                <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><g stroke="currentColor" stroke-width="1.35" stroke-linejoin="round" stroke-linecap="round"><path d="M12 4 5.2 7.6 12 11l6.8-3.4L12 4Z"/><path d="M5.2 7.6v3.8L12 14.8l6.8-3.4V7.6"/><path d="M12 11v3.8"/><path d="M5.2 11.2 2 12.7l3.2 1.5 3.2-1.5L5.2 11.2Z" opacity="0.95"/><path d="M2 12.7v2L5.2 16.2l3.2-1.5v-2" opacity="0.95"/><path d="M18.8 11.2 15.6 12.7l3.2 1.5L22 12.7l-3.2-1.5Z" opacity="0.95"/><path d="M15.6 12.7v2l3.2 1.5 3.2-1.5v-2" opacity="0.95"/></g></svg>
+              </span>
+              <span>Live cohorts • Certificates</span>
             </div>
           </div>
         </div>
